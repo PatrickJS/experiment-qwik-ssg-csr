@@ -5,10 +5,14 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(() => {
   return {
+    build: {
+      ssr: false
+    },
     plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     preview: {
       headers: {
-        "Cache-Control": "public, max-age=600",
+        "Cache-Control": "private, max-age=0",
+        // "Cache-Control": "public, max-age=600",
       },
     },
   };

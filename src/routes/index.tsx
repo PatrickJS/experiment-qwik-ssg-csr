@@ -1,7 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
+  const username = "John";
   return (
     <>
       <div role="presentation" class="ellipsis"></div>
@@ -11,9 +12,9 @@ export default component$(() => {
         <h3>
           You can <span class="highlight">count</span>
           <br /> on me
+          <Link href={`/ssg/user/${username}/`}>User</Link>
         </h3>
       </div>
-
     </>
   );
 });
