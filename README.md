@@ -1,4 +1,5 @@
-recreate partial rendering by SSG the ssg route and CSR the regular routes.
+# Qwik SSG CSR
+> Recreate partial rendering by SSG the ssg route and CSR the regular routes.
 
 * (csr)/user/[userId]/index.tsx
 * ssg/user/[userId]/index.tsx
